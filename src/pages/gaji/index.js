@@ -8,7 +8,7 @@ const Gaji = ({navigation}) => {
     <View style={styles.pages}>
       <Header onPress={() => navigation.goBack()} title="Pendapatan Gaji" />
       <View style={styles.content}>
-      {/* Input di ambil dari folder component/atom/input */}
+        {/* Input di ambil dari folder component/atom/input */}
         <Input label="Full Name" />
         <Gap height={24} />
         <Input label="Pekerjaan" />
