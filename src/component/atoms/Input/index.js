@@ -2,6 +2,8 @@ import React from 'react';
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import {colors, fonts} from '../../../utils';
 
+
+// dibuat props label, yang menerima inputan dari gaji
 const Input = ({label}) => {
   return (
     <View>
