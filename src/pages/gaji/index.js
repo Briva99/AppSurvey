@@ -10,6 +10,7 @@ const Gaji = ({navigation}) => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
           {/* Input di ambil dari folder component/atom/input */}
+          <Gap height={20} />
           <Input label="Full Name" />
           <Gap height={24} />
           <Input label="Pekerjaan" />
