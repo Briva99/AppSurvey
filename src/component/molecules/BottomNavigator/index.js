@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {colors} from '../../../utils';
+import {colors} from '../../../utility';
 import {TabItem} from '../../atoms';
 
 const BottomNavigator = ({state, descriptors, navigation}) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {colors, fonts} from '../../../utils';
+import {colors, fonts} from '../../../utility';
 import IconOnly from './IconOnly';
 
 const Button = ({type, title, onPress, icon}) => {

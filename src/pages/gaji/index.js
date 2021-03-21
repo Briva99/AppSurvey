@@ -1,32 +1,34 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import {Button, Gap, Header, Input} from '../../components';
-import {colors} from '../../utils';
+import {ScrollView, StyleSheet, View} from 'react-native';
+import {Button, Gap, Header, Input} from '../../component';
+import {colors} from '../../utility';
 
 const Gaji = ({navigation}) => {
   return (
     <View style={styles.pages}>
       <Header onPress={() => navigation.goBack()} title="Pendapatan Gaji" />
-      <View style={styles.content}>
-        {/* Input di ambil dari folder component/atom/input */}
-        <Input label="Full Name" />
-        <Gap height={24} />
-        <Input label="Pekerjaan" />
-        <Gap height={24} />
-        <Input label="Kewajiban kepada pihak lain" />
-        <Gap height={24} />
-        <Input label="Jumlah Anak" />
-        <Gap height={24} />
-        <Input label="pendidikan Anak" />
-        <Gap height={24} />
-        <Input label="GPS" />
-        <Gap height={40} />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.content}>
+          {/* Input di ambil dari folder component/atom/input */}
+          <Input label="Full Name" />
+          <Gap height={24} />
+          <Input label="Pekerjaan" />
+          <Gap height={24} />
+          <Input label="Kewajiban kepada pihak lain" />
+          <Gap height={24} />
+          <Input label="Jumlah Anak" />
+          <Gap height={24} />
+          <Input label="pendidikan Anak" />
+          <Gap height={24} />
+          <Input label="GPS" />
+          <Gap height={40} />
 
-        <Button
-          title="Continue"
-          onPress={() => navigation.navigate('Report')}
-        />
-      </View>
+          <Button
+            title="Continue"
+            onPress={() => navigation.navigate('Report')}
+          />
+        </View>
+      </ScrollView>
     </View>
   );
 };
