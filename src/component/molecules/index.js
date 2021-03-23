@@ -1,4 +1,4 @@
 import BottomNavigator from './BottomNavigator';
 import Header from './Header';
-
-export {Header, BottomNavigator};
+import ListSurvey from './ListSurvey';
+export {Header, BottomNavigator,ListSurvey};
