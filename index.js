@@ -11,5 +11,6 @@ import Login from './src/pages/Login';
 import GetStarted from './src/pages/GetStarted';
 import DaftarSurvey from './src/pages/DaftarSurvey';
 import report from './src/pages/report';
+import Register from './src/pages/Register';
 
-AppRegistry.registerComponent(appName, () => report);
+AppRegistry.registerComponent(appName, () => Login);
