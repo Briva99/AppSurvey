@@ -12,5 +12,6 @@ import GetStarted from './src/pages/GetStarted';
 import DaftarSurvey from './src/pages/DaftarSurvey';
 import report from './src/pages/report';
 import Register from './src/pages/Register';
+import AgunanBpkb from './src/pages/AgunanBpkb';
 
-AppRegistry.registerComponent(appName, () => Login);
+AppRegistry.registerComponent(appName, () => AgunanBpkb);
