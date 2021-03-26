@@ -3,17 +3,16 @@ import {StyleSheet, Text, View} from 'react-native';
 import {colors} from '../../utility';
 import {Button, Gap} from '../../component';
 
-const GetStarted = ({navigation}) => {
+const GetStarted = () => {
   return (
     <View style={styles.pages}>
-      <Text style={styles.textInput}>Mengedepankan Akurasi dan Prestasi</Text>
+      <Text style={styles.textInput}>
+        Pengajuan Kredit Cukup dengan Ibu Jari Anda
+      </Text>
       <View style={styles.content}>
-        <Button
-          title="Get Started"
-          onPress={() => navigation.navigate('Register')}
-        />
+        <Button title="Get Started" />
         <Gap height={20} />
-        <Button title="Sign In" onPress={() => navigation.replace('Login')} />
+        <Button title="Sign In" />
       </View>
     </View>
   );

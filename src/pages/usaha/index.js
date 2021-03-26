@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import {Button, Gap, Header, Input} from '../../component';
 import {colors} from '../../utility';
 
@@ -7,7 +7,7 @@ const Usaha = ({navigation}) => {
   return (
     <View style={styles.pages}>
       <Header onPress={() => navigation.goBack()} title="Hasil Usaha" />
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
           <Gap height={20} />
           <Input label="Lokasi Usaha" />

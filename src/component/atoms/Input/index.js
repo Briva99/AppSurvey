@@ -3,32 +3,11 @@ import {StyleSheet, Text, TextInput, View} from 'react-native';
 import {colors, fonts} from '../../../utility';
 
 // dibuat props label, yang menerima inputan dari gaji
-const Input = ({label, keyboardType, secureTextEntry, isTextArea}) => {
-  if (isTextArea) {
-    return (
-      <View>
-        <Text style={styles.label}>{label}</Text>
-        <TextInput
-          multiline={true}
-          numberOfLines={4}
-          style={styles.input}
-          keyboardType={keyboardType}
-          secureTextEntry={secureTextEntry}
-          // eslint-disable-next-line react/jsx-no-duplicate-props
-          style={styles.txtInputArea}
-        />
-      </View>
-    );
-  }
-
+const Input = ({label}) => {
   return (
     <View>
       <Text style={styles.label}>{label}</Text>
-      <TextInput
-        style={styles.input}
-        keyboardType={keyboardType}
-        secureTextEntry={secureTextEntry}
-      />
+      <TextInput style={styles.input} />
     </View>
   );
 };
@@ -41,15 +20,6 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
     borderRadius: 10,
     padding: 12,
-    color: 'black',
-  },
-  txtInputArea: {
-    textAlignVertical: 'top',
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: 10,
-    padding: 12,
-    color: 'black',
   },
   label: {
     fontSize: 16,
