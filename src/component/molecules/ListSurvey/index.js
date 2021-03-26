@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image,TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import {colors, fonts} from '../../../utility';
 
 const ListSurvey = ({name, address, pic}) => {
@@ -11,7 +11,7 @@ const ListSurvey = ({name, address, pic}) => {
         <Text style={styles.address}>{address}</Text>
       </View>
       <View>
-      <Text syle={styles.status}>Status</Text>
+        <Text syle={styles.status}>Status</Text>
       </View>
     </TouchableOpacity>
   );
@@ -38,5 +38,4 @@ const styles = StyleSheet.create({
     color: colors.text.secondary,
     marginTop: 6,
   },
-
 });

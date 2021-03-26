@@ -12,7 +12,7 @@ const Login = ({navigation}) => {
         <Gap height={30} />
         <Input label="Email Address" />
         <Gap height={20} />
-        <Input label="Password" />
+        <Input label="Password" secureTextEntry />
         <Gap height={10} />
         <Link title="Forget My Password" />
         <Gap height={20} />
