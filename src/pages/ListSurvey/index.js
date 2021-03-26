@@ -1,14 +1,14 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-const Register = () => {
+const ListSurvey = () => {
   return (
     <View>
-      <Text>Halaman Register</Text>
+      <Text>Halaman List Survey</Text>
     </View>
   );
 };
 
-export default Register;
+export default ListSurvey;
 
 const styles = StyleSheet.create({});
