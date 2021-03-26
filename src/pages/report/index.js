@@ -39,7 +39,7 @@ const Report = ({navigation}) => {
 
           <Gap height={40} />
 
-          <Button title="Submit" />
+          <Button title="Submit" isButton={true} />
         </View>
       </ScrollView>
     </View>

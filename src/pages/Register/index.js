@@ -22,6 +22,7 @@ const Register = ({navigation}) => {
 
           <Button
             title="Continue"
+            isButton={true}
             onPress={() => navigation.navigate('Login')}
           />
         </View>

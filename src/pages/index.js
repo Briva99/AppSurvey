@@ -6,6 +6,7 @@ import SurveyBiodata from './SurveyBiodata';
 import Gaji from './gaji';
 import Report from './report';
 import Usaha from './usaha';
+import AgunanSHM from './AgunanSHM';
 
 export {
   DaftarSurvey,
@@ -16,4 +17,5 @@ export {
   Gaji,
   Report,
   Usaha,
+  AgunanSHM,
 };

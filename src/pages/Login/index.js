@@ -18,6 +18,7 @@ const Login = ({navigation}) => {
         <Gap height={20} />
         <Button
           title="Sign In"
+          isButton={true}
           onPress={() => navigation.replace('DaftarSurvey')}
         />
         <Gap height={30} />
