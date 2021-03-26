@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {Button, Gap, Input, Link} from '../../component';
 import {colors} from '../../utility';
 
-const Login = () => {
+const Login = ({navigation}) => {
   return (
     <View style={styles.pages}>
       <Text style={styles.textInput}>Masuk dan mulai berkonsultasi</Text>
@@ -16,7 +16,10 @@ const Login = () => {
         <Gap height={10} />
         <Link title="Forget My Password" />
         <Gap height={20} />
-        <Button title="Sign In" />
+        <Button
+          title="Sign In"
+          onPress={() => navigation.replace('DaftarSurvey')}
+        />
         <Gap height={30} />
         <Link title="Create New Account" align="center" />
       </View>

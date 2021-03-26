@@ -1,17 +1,19 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image,TouchableOpacity} from 'react-native';
 import {colors, fonts} from '../../../utility';
 
-const ListSurvey = ({type, name, address, pic}) => {
+const ListSurvey = ({name, address, pic}) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container}>
       <Image source={pic} style={styles.picture} />
       <View>
-        
         <Text style={styles.title}>{name}</Text>
         <Text style={styles.address}>{address}</Text>
       </View>
-    </View>
+      <View>
+      <Text syle={styles.status}>Status</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
@@ -36,4 +38,5 @@ const styles = StyleSheet.create({
     color: colors.text.secondary,
     marginTop: 6,
   },
+  
 });

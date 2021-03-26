@@ -8,7 +8,7 @@ const source = {
   cache: true,
 };
 
-const Report = () => {
+const Report = ({navigation}) => {
   return (
     <View style={styles.pages}>
       <Header onPress={() => navigation.goBack()} title="Hasil" />
@@ -16,24 +16,24 @@ const Report = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
           <View style={styles.container}>
-          <ScrollView contentContainerStyle={{ flex: 1 }}>
-            <Pdf
-              source={source}
-              onLoadComplete={(numberOfPages, filePath) => {
-                console.log(`number of pages: ${numberOfPages}`);
-              }}
-              onPageChanged={(page, numberOfPages) => {
-                console.log(`current page: ${page}`);
-              }}
-              onError={error => {
-                console.log(error);
-              }}
-              onPressLink={uri => {
-                console.log(`Link presse: ${uri}`);
-              }}
-              style={styles.pdf}
-            />
-              </ScrollView>
+            <ScrollView contentContainerStyle={{flex: 1}}>
+              <Pdf
+                source={source}
+                onLoadComplete={(numberOfPages, filePath) => {
+                  console.log(`number of pages: ${numberOfPages}`);
+                }}
+                onPageChanged={(page, numberOfPages) => {
+                  console.log(`current page: ${page}`);
+                }}
+                onError={error => {
+                  console.log(error);
+                }}
+                onPressLink={uri => {
+                  console.log(`Link presse: ${uri}`);
+                }}
+                style={styles.pdf}
+              />
+            </ScrollView>
           </View>
           <Gap height={20} />
 
@@ -58,14 +58,14 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     marginTop: 5,
-},
+  },
   pages: {
     backgroundColor: colors.white,
     flex: 1,
   },
   pdf: {
     flex: 1,
-    width:Dimensions.get('window').width,
+    width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
   },
 });

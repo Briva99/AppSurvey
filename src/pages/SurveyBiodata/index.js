@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet, View} from 'react-native';
 import {Button, Gap, Header, Input, PickerSelect} from '../../component';
 import {colors} from '../../utility';
 
-const Register = ({navigation}) => {
+const SurveyBiodata = ({navigation}) => {
   return (
     <View style={styles.pages}>
       <Header onPress={() => navigation.goBack()} title="Survey Biodata" />
@@ -37,7 +37,7 @@ const Register = ({navigation}) => {
   );
 };
 
-export default Register;
+export default SurveyBiodata;
 
 const styles = StyleSheet.create({
   content: {
