@@ -5,16 +5,42 @@ import IconDoctorActive from './ic-doctor-active.svg';
 import IconDoctor from './ic-doctor.svg';
 import IconHospitalsActive from './ic-hospitals-active.svg';
 import IconHospitals from './ic-hospitals.svg';
-import IconMessagesActive from './ic-messages-active.svg';
-import IconMessages from './ic-messages.svg';
 import IconList from './IconList.svg';
 import IconListActive from './IconListActive.svg';
 import IconProfile from './IconProfile.svg';
 import IconUsers from './IconUsers.svg';
 import IconUsersActive from './IconUsersActive.svg';
+import IconNext from './ic-next.svg';
+import IconAgunan from './agunan.svg';
+import IconBiodata from './biodata.svg';
+import IconSumberPenghasilan from './sumberpenghasilan.svg';
+import IconCars from './IconCar.svg';
+import IconSertifikat from './IconSertifikat.svg';
+import IconPhoto from './IcconPhoto.svg';
+import IconBuy from './IconBuy.svg';
+import IconGaji from './IconGaji.svg';
+import IconCampuran from './IconGajidanUsaha.svg';
+import IconUsaha from './IconUsaha.svg';
+import IconMan from './IconMan.svg';
+import IconWoman from './IconWoman.svg';
+import IconPicture from './IconPhoto.svg';
+import IconHome from './IconHome.svg';
 
 export {
+  IconHome,
+  IconPicture,
+  IconMan,
+  IconWoman,
+  IconGaji,
+  IconCampuran,
+  IconUsaha,
+  IconAgunan,
+  IconCars,
+  IconSertifikat,
+  IconSumberPenghasilan,
+  IconBiodata,
   IconList,
+  IconNext,
   IconListActive,
   IconProfile,
   IconUsers,
@@ -26,6 +52,6 @@ export {
   IconDoctor,
   IconHospitalsActive,
   IconHospitals,
-  IconMessagesActive,
-  IconMessages,
+  IconPhoto,
+  IconBuy,
 };

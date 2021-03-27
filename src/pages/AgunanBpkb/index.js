@@ -38,15 +38,8 @@ const AgunanBpkb = ({navigation}) => {
           <Input label="Alamat" />
           <Gap height={20} />
           <Input label="GPS" />
-        </View>
-        <View style={styles.button}>
-          <Button title="Foto STNK" />
-          <Button title="Foto BPKB" />
-        </View>
-        <View style={styles.button1}>
-          <Button title="Tambah" />
-          <Button title="Hapus" />
-          <Button title="Keluar" />
+          <Gap height={40} />
+          <Button title="Simpan" />
         </View>
       </ScrollView>
     </View>
@@ -57,24 +50,12 @@ export default AgunanBpkb;
 
 const styles = StyleSheet.create({
   content: {
-    padding: 20,
+    padding: 40,
     paddingTop: 0,
   },
 
   pages: {
     backgroundColor: colors.white,
     flex: 1,
-  },
-  button: {
-    padding: 30,
-    paddingTop: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'flex-end',
-  },
-  button1: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'flex-end',
   },
 });

@@ -1,11 +1,17 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import {
+  Agunan,
   AgunanBpkb,
   DaftarSurvey,
   Gaji,
   GetStarted,
+  JenisPenghasilan,
   Login,
+  Pasangan,
+  PasanganU,
+  Pengeluaran,
+  Picture,
   Register,
   Report,
   Splash,
@@ -95,6 +101,36 @@ const Router = () => {
       <Stack.Screen
         name="Survey"
         component={Survey}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Agunan"
+        component={Agunan}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="JenisPenghasilan"
+        component={JenisPenghasilan}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Pasangan"
+        component={Pasangan}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="PasanganU"
+        component={PasanganU}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Pengeluaran"
+        component={Pengeluaran}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Picture"
+        component={Picture}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

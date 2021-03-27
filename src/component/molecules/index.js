@@ -5,6 +5,7 @@ import HomeProfile from './HomeProfile';
 import Profile from './Profile';
 import List from './List';
 import ProfilItem from './ProfilItem';
+import ProfileNasabah from './ProfileNasabah';
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   Profile,
   List,
   ProfilItem,
+  ProfileNasabah,
 };

@@ -10,13 +10,13 @@ const Usaha = ({navigation}) => {
       <ScrollView>
         <View style={styles.content}>
           <Gap height={20} />
-          <Input label="Lokasi Usaha" />
+          <Input label="Lokasi Usaha" isTextArea={true} />
           <Gap height={24} />
-          <Input label="Omset" />
+          <Input label="Omset" keyboardType="number-pad" />
           <Gap height={24} />
-          <Input label="HPP" />
+          <Input label="HPP" keyboardType="number-pad" />
           <Gap height={24} />
-          <Input label="Biaya Lain-lain" />
+          <Input label="Biaya Lain-lain" keyboardType="number-pad" />
           <Gap height={24} />
           <Input label="GPS" />
           <Gap height={24} />

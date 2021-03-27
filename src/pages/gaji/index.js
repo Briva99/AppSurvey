@@ -15,17 +15,19 @@ const Gaji = ({navigation}) => {
           <Gap height={24} />
           <Input label="Pekerjaan" />
           <Gap height={24} />
-          <Input label="Kewajiban kepada pihak lain" />
+          <Input label="Nama Perusahaan Tempat Bekerja" />
           <Gap height={24} />
-          <Input label="Jumlah Anak" />
+          <Input label="Alamat Tempat Bekerja" />
           <Gap height={24} />
-          <Input label="pendidikan Anak" />
+          <Input label="Jabatan" />
+          <Gap height={24} />
+          <Input label="Take Home Pay" keyboardType="number-pad" />
           <Gap height={24} />
           <Input label="GPS" />
           <Gap height={40} />
 
           <Button
-            title="Continue"
+            title="Submit"
             onPress={() => navigation.navigate('Report')}
           />
         </View>

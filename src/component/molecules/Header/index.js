@@ -2,8 +2,12 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {colors, fonts} from '../../../utility';
 import {Button, Gap} from '../../atoms';
+import IconHeader from './IconHeader';
 
-const Header = ({onPress, title}) => {
+const Header = ({onPress, title, type}) => {
+  if (type === 'icon-profile') {
+    return <IconHeader onPress={onPress} />;
+  }
   return (
     <View style={styles.container}>
       <Button type="icon-only" icon="back-dark" onPress={onPress} />

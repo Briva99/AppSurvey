@@ -6,7 +6,11 @@ import {colors} from '../../utility';
 const SurveyBiodata = ({navigation}) => {
   return (
     <View style={styles.pages}>
-      <Header onPress={() => navigation.goBack()} title="Survey Biodata" />
+      <Header
+        type="icon-profile"
+        title="Biodata"
+        onPress={() => navigation.goBack()}
+      />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
           {/* Input di ambil dari folder component/atom/input */}
