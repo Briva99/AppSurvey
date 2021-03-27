@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet, View} from 'react-native';
 import {Gap, Header, Input, Button, PickerSelect} from '../../component';
 import {colors} from '../../utility';
 
-const AgunanBpkb = () => {
+const AgunanBpkb = ({navigation}) => {
   return (
     <View style={styles.pages}>
       <Header onPress={() => navigation.goBack()} title="Agunan BPKB" />

@@ -2,17 +2,18 @@ import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import {colors, fonts} from '../../../utility';
 
-const ListSurvey = ({name, address, pic}) => {
+const ListSurvey = ({name, address, pic, pengajuan, onPress}) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image source={pic} style={styles.picture} />
       <View>
         <Text style={styles.title}>{name}</Text>
         <Text style={styles.address}>{address}</Text>
+        <Text style={styles.pengajuan}>{pengajuan}</Text>
       </View>
-      <View>
+      {/* <View>
         <Text syle={styles.status}>Status</Text>
-      </View>
+      </View> */}
     </TouchableOpacity>
   );
 };
@@ -36,6 +37,13 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: fonts.primary[300],
     color: colors.text.secondary,
-    marginTop: 6,
   },
+  pengajuan: {
+    fontSize: 16,
+    fontFamily: fonts.primary[600],
+    marginTop: 5,
+  },
+  // status:{
+  //   marginRight: 20,
+  // }
 });
