@@ -16,8 +16,14 @@ import Pasangan from './Pasangan';
 import PasanganU from './PasanganU';
 import Pengeluaran from './Pengeluaran';
 import Picture from './Picture';
+import PictureAgunan from './PictureAgunan';
+import PictureRumah from './PictureRumah';
+import PictureUsaha from './PictureUsaha';
 
 export {
+  PictureAgunan,
+  PictureRumah,
+  PictureUsaha,
   Pasangan,
   Picture,
   Pengeluaran,

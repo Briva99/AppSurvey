@@ -13,15 +13,25 @@ const Picture = ({navigation}) => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
           <Gap height={20} />
-          
+
           <List
             type="next"
             desc="Rumah Tempat Tinggal"
             icon="home"
-            onPress={() => navigation.navigate('Picture')}
+            onPress={() => navigation.navigate('PictureRumah')}
           />
-          <List type="next" desc="Agunan" icon="agunan" />
-          <List type="next" desc="Usaha" icon="usaha" />
+          <List
+            type="next"
+            desc="Agunan"
+            icon="agunan"
+            onPress={() => navigation.navigate('PictureAgunan')}
+          />
+          <List
+            type="next"
+            desc="Usaha"
+            icon="usaha"
+            onPress={() => navigation.navigate('PictureUsaha')}
+          />
         </View>
       </ScrollView>
     </View>

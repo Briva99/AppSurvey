@@ -12,6 +12,9 @@ import {
   PasanganU,
   Pengeluaran,
   Picture,
+  PictureAgunan,
+  PictureRumah,
+  PictureUsaha,
   Register,
   Report,
   Splash,
@@ -131,6 +134,21 @@ const Router = () => {
       <Stack.Screen
         name="Picture"
         component={Picture}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="PictureUsaha"
+        component={PictureUsaha}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="PictureAgunan"
+        component={PictureAgunan}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="PictureRumah"
+        component={PictureRumah}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
