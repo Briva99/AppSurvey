@@ -21,7 +21,6 @@ import PictureAgunan from './PictureAgunan';
 import PictureRumah from './PictureRumah';
 import PictureUsaha from './PictureUsaha';
 
-
 export {
   PictureAgunan,
   PictureRumah,
@@ -45,5 +44,4 @@ export {
   UserProfile,
   Splash,
   Survey,
-
 };
