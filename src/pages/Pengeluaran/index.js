@@ -32,7 +32,10 @@ const Pengeluaran = ({navigation}) => {
           <Gap height={20} />
           <Input label="Biaya Lain-lain" keyboardType="number-pad" />
           <Gap height={40} />
-          <Button title="Submit" />
+          <Button
+            title="Submit"
+            onPress={() => navigation.navigate('Survey')}
+          />
         </View>
       </ScrollView>
     </View>

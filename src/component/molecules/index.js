@@ -6,8 +6,10 @@ import Profile from './Profile';
 import List from './List';
 import ProfilItem from './ProfilItem';
 import ProfileNasabah from './ProfileNasabah';
+import FolderFoto from './FolderFoto';
 
 export {
+  FolderFoto,
   Header,
   BottomNavigator,
   ListSurvey,

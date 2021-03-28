@@ -42,7 +42,7 @@ export default Picture;
 
 const styles = StyleSheet.create({
   content: {
-    padding: 40,
+    padding: 10,
     paddingTop: 0,
   },
 

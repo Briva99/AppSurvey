@@ -28,7 +28,7 @@ const Gaji = ({navigation}) => {
 
           <Button
             title="Submit"
-            onPress={() => navigation.navigate('Report')}
+            onPress={() => navigation.navigate('Survey')}
           />
         </View>
       </ScrollView>

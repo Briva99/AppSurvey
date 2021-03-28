@@ -23,12 +23,11 @@ import IconCampuran from './IconGajidanUsaha.svg';
 import IconUsaha from './IconUsaha.svg';
 import IconMan from './IconMan.svg';
 import IconWoman from './IconWoman.svg';
-import IconPicture from './IconPhoto.svg';
+
 import IconHome from './IconHome.svg';
 
 export {
   IconHome,
-  IconPicture,
   IconMan,
   IconWoman,
   IconGaji,
