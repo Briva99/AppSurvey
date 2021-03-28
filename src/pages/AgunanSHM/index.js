@@ -32,21 +32,18 @@ const AgunanSHM = ({navigation}) => {
           <Gap height={24} />
           <Input label="Luas" />
           <Gap height={24} />
-          {/* <PickerSelect label="Batas Tanah" isBatasTanah={true} />
-          <Gap height={24} /> */}
-          {/* <PickerSelect label="Peruntukan Tanah" isPeruntukanTanah={true} />
+          {/* <PickerSelect label="Batas Tanah" isBatasTanah={true} /> */}
+          <Gap height={24} />
+          <PickerSelect label="Peruntukan Tanah" isPeruntukanTanah={true} />
           <Gap height={24} />
           <PickerSelect label="Kependudukan" isKependudukan={true} />
-          <Gap height={24} />
-          <PickerMultiSelect label="Fasilitas Penduduk" isFasum={true} />
+          {/* <Gap height={24} />
+          <PickerMultiSelect label="Fasilitas Penduduk" isFasum={true} /> */}
           <Gap height={24} />
           <PickerSelect label="Jenis Bangunan" isJenisBangunan={true} />
           <Gap height={24} />
-          <PickerMultiSelect
-            label="Kontruksi Bangunan"
-            isKontruksiBangunan={true}
-          />
-          <Gap height={24} />
+          <PickerSelect label="Kontruksi Bangunan" isKontruksiBangunan={true} />
+          {/* <Gap height={24} />
           <PickerMultiSelect
             label="Tata Ruang Bangunan"
             isTataRuangBangunan={true}

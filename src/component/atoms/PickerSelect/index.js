@@ -9,6 +9,10 @@ const PickerSelect = ({
   isStatus,
   isAgunan,
   isAgunanSHM,
+  isPeruntukanTanah,
+  isKependudukan,
+  isJenisBangunan,
+  isKontruksiBangunan,
 }) => {
   const [selectedLanguage, setSelectedLanguage] = useState();
 
@@ -81,6 +85,91 @@ const PickerSelect = ({
             <Picker.Item label="Pilih Jenis Agunan" />
             <Picker.Item label="SHM" value="SHM" />
             <Picker.Item label="SHGB" value="SHGB" />
+          </Picker>
+        </View>
+      </View>
+    );
+  }
+  if (isPeruntukanTanah) {
+    return (
+      <View>
+        <Text style={styles.label}>{label}</Text>
+        <View style={styles.picker}>
+          <Picker
+            selectedValue={selectedLanguage}
+            onValueChange={(itemValue, itemIndex) =>
+              setSelectedLanguage(itemValue)
+            }>
+            <Picker.Item label="--- Peruntukan Tanah ---" />
+            <Picker.Item label="Perumahan" value="Perumahan" />
+            <Picker.Item label="Perdagangan" value="Perdagangan" />
+            <Picker.Item label="Perkantoran" value="Perkantoran" />
+            <Picker.Item label="Industri" value="Industri" />
+            <Picker.Item label="Pertanian" value="Pertanian" />
+          </Picker>
+        </View>
+      </View>
+    );
+  }
+  if (isKependudukan) {
+    return (
+      <View>
+        <Text style={styles.label}>{label}</Text>
+        <View style={styles.picker}>
+          <Picker
+            selectedValue={selectedLanguage}
+            onValueChange={(itemValue, itemIndex) =>
+              setSelectedLanguage(itemValue)
+            }>
+            <Picker.Item label="--- Kependudukan ---" />
+            <Picker.Item label="Padat" value="Padat" />
+            <Picker.Item label="Sedang" value="Sedang" />
+            <Picker.Item label="Jarang" value="Jarang" />
+            <Picker.Item label="Kosong" value="Kosong" />
+          </Picker>
+        </View>
+      </View>
+    );
+  }
+  if (isJenisBangunan) {
+    return (
+      <View>
+        <Text style={styles.label}>{label}</Text>
+        <View style={styles.picker}>
+          <Picker
+            selectedValue={selectedLanguage}
+            onValueChange={(itemValue, itemIndex) =>
+              setSelectedLanguage(itemValue)
+            }>
+            <Picker.Item label="--- Jenis Bangunan ---" />
+            <Picker.Item label="Rumah Tinggal" value="RumahTinggal" />
+            <Picker.Item label="Rumah Petak" value="RumahPetak" />
+            <Picker.Item label="Ruko" value="Ruko" />
+            <Picker.Item label="Pabrik" value="Pabrik" />
+            <Picker.Item label="Gudang" value="Gudang" />
+            <Picker.Item label="Kantor" value="Kantor" />
+            <Picker.Item label="Villa" value="Villa" />
+            <Picker.Item label="Lain-lain" value="lain-lain" />
+          </Picker>
+        </View>
+      </View>
+    );
+  }
+  if (isKontruksiBangunan) {
+    return (
+      <View>
+        <Text style={styles.label}>{label}</Text>
+        <View style={styles.picker}>
+          <Picker
+            selectedValue={selectedLanguage}
+            onValueChange={(itemValue, itemIndex) =>
+              setSelectedLanguage(itemValue)
+            }>
+            <Picker.Item label="--- Kontruksi Bangunan ---" />
+            <Picker.Item label="Beton" value="Beton" />
+            <Picker.Item label="Besi" value="Besi" />
+            <Picker.Item label="Batu Bata" value="Batu Bata" />
+            <Picker.Item label="Kayu" value="Kayu" />
           </Picker>
         </View>
       </View>
