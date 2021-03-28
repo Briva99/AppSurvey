@@ -55,9 +55,8 @@ const PickerSelect = ({label, isJenisKelamin, isStatus, isAgunan}) => {
               setSelectedLanguage(itemValue)
             }>
             <Picker.Item label="Pilih Jenis Agunan" />
-            <Picker.Item label="SHM" value="SHM" />
-            <Picker.Item label="HGB" value="HGB" />
-            <Picker.Item label="BPKB" value="BPKB" />
+            <Picker.Item label="BPKB Mobil" value="BPKB Mobil" />
+            <Picker.Item label="BPKB Motor" value="BPKB Motor" />
           </Picker>
         </View>
       </View>

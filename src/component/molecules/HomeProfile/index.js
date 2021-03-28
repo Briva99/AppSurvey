@@ -1,15 +1,15 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {DummyUser} from '../../../assets';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {DummyRuffi} from '../../../assets';
 import {colors, fonts} from '../../../utility';
 
-const HomeProfile = ({onPress, name, job}) => {
+const HomeProfile = ({onPress}) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Image source={DummyUser} style={styles.avatar} />
+      <Image source={DummyRuffi} style={styles.avatar} />
       <View>
-        <Text style={styles.name}>{name}</Text>
-        <Text style={styles.profesi}>{job}</Text>
+        <Text style={styles.name}>Mongky D Ruffi</Text>
+        <Text style={styles.profesi}>Surveyor</Text>
       </View>
     </TouchableOpacity>
   );
