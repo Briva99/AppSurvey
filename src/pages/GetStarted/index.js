@@ -10,10 +10,15 @@ const GetStarted = ({navigation}) => {
       <View style={styles.content}>
         <Button
           title="Get Started"
+          isButton={true}
           onPress={() => navigation.navigate('Register')}
         />
         <Gap height={20} />
-        <Button title="Sign In" onPress={() => navigation.replace('Login')} />
+        <Button
+          title="Sign In"
+          isButton={true}
+          onPress={() => navigation.replace('Login')}
+        />
       </View>
     </View>
   );
