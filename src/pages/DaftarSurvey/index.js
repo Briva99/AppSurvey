@@ -40,14 +40,14 @@ const DaftarSurvey = ({navigation}) => {
             <ListSurvey
               name="Shank"
               address="Jln. Surya Sejahtera 20"
-              pengajuan="Rp. 50.000.000"
+              pengajuan="Rp. 150.000.000"
               pic={DummyShank}
               onPress={() => navigation.navigate('Survey')}
             />
             <ListSurvey
               name="Portgas D Ace"
               address="Jln. Gang Senggol"
-              pengajuan="Rp. 20.000.000"
+              pengajuan="Rp. 120.000.000"
               pic={DummyIce}
               onPress={() => navigation.navigate('Survey')}
             />
