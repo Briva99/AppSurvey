@@ -6,6 +6,7 @@ import SurveyBiodata from './SurveyBiodata';
 import Gaji from './gaji';
 import Report from './report';
 import Usaha from './usaha';
+import AgunanSHM from './AgunanSHM';
 import AgunanBpkb from './AgunanBpkb';
 import UserProfile from './UserProfile';
 import Splash from './Splash';
@@ -19,6 +20,7 @@ import Picture from './Picture';
 import PictureAgunan from './PictureAgunan';
 import PictureRumah from './PictureRumah';
 import PictureUsaha from './PictureUsaha';
+
 
 export {
   PictureAgunan,
@@ -38,8 +40,10 @@ export {
   Gaji,
   Report,
   Usaha,
+  AgunanSHM,
   AgunanBpkb,
   UserProfile,
   Splash,
   Survey,
+
 };

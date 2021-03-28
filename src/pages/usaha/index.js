@@ -23,6 +23,7 @@ const Usaha = ({navigation}) => {
 
           <Button
             title="Submit"
+            isButton={true}
             onPress={() => navigation.navigate('Report')}
           />
         </View>

@@ -34,7 +34,11 @@ const SurveyBiodata = ({navigation}) => {
           <Input label="GPS" />
           <Gap height={40} />
 
-          <Button title="Submit" onPress={() => navigation.navigate('Login')} />
+          <Button
+            title="Submit"
+            isButton={true}
+            onPress={() => navigation.navigate('Login')}
+          />
         </View>
       </ScrollView>
     </View>
