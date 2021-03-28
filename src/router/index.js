@@ -3,6 +3,7 @@ import React from 'react';
 import {
   Agunan,
   AgunanBpkb,
+  AgunanSHM,
   DaftarSurvey,
   Gaji,
   GetStarted,
@@ -40,7 +41,7 @@ const MainApp = () => {
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="Splash">
+    <Stack.Navigator initialRouteName="MainApp">
       <Stack.Screen
         name="Splash"
         component={Splash}
@@ -149,6 +150,11 @@ const Router = () => {
       <Stack.Screen
         name="PictureRumah"
         component={PictureRumah}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="AgunanSHM"
+        component={AgunanSHM}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

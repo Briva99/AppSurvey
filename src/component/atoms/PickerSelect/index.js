@@ -3,7 +3,13 @@ import {StyleSheet, Text, View} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import {colors, fonts} from '../../../utility';
 
-const PickerSelect = ({label, isJenisKelamin, isStatus, isAgunan}) => {
+const PickerSelect = ({
+  label,
+  isJenisKelamin,
+  isStatus,
+  isAgunan,
+  isAgunanSHM,
+}) => {
   const [selectedLanguage, setSelectedLanguage] = useState();
 
   if (isJenisKelamin) {
@@ -57,6 +63,24 @@ const PickerSelect = ({label, isJenisKelamin, isStatus, isAgunan}) => {
             <Picker.Item label="Pilih Jenis Agunan" />
             <Picker.Item label="BPKB Mobil" value="BPKB Mobil" />
             <Picker.Item label="BPKB Motor" value="BPKB Motor" />
+          </Picker>
+        </View>
+      </View>
+    );
+  }
+  if (isAgunanSHM) {
+    return (
+      <View>
+        <Text style={styles.label}>{label}</Text>
+        <View style={styles.picker}>
+          <Picker
+            selectedValue={selectedLanguage}
+            onValueChange={(itemValue, itemIndex) =>
+              setSelectedLanguage(itemValue)
+            }>
+            <Picker.Item label="Pilih Jenis Agunan" />
+            <Picker.Item label="SHM" value="SHM" />
+            <Picker.Item label="SHGB" value="SHGB" />
           </Picker>
         </View>
       </View>

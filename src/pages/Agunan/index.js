@@ -13,7 +13,12 @@ const Agunan = ({navigation}) => {
         icon="bpkb"
         onPress={() => navigation.navigate('AgunanBpkb')}
       />
-      <List type="next" desc="Sertifikat SHM / HGB" icon="shm" />
+      <List
+        type="next"
+        desc="Sertifikat SHM / HGB"
+        icon="shm"
+        onPress={() => navigation.navigate('AgunanSHM')}
+      />
     </View>
   );
 };
