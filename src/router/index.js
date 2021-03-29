@@ -26,6 +26,9 @@ import {
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {BottomNavigator} from '../component';
+import ReportBpkb from '../pages/Reports/BPKB';
+import ReportBiodata from '../pages/Reports/Biodata';
+import ReportShm from '../pages/Reports/SHM';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -155,6 +158,21 @@ const Router = () => {
       <Stack.Screen
         name="AgunanSHM"
         component={AgunanSHM}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="ReportBpkb"
+        component={ReportBpkb}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="ReportShm"
+        component={ReportShm}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="ReportBiodata"
+        component={ReportBiodata}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

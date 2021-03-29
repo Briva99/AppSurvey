@@ -41,7 +41,7 @@ const AgunanBpkb = ({navigation}) => {
           <Gap height={40} />
           <Button
             title="Submit"
-            onPress={() => navigation.navigate('Survey')}
+            onPress={() => navigation.navigate('ReportBpkb')}
           />
         </View>
       </ScrollView>

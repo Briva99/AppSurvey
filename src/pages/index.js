@@ -20,8 +20,14 @@ import Picture from './Picture';
 import PictureAgunan from './PictureAgunan';
 import PictureRumah from './PictureRumah';
 import PictureUsaha from './PictureUsaha';
+import Bpkb from './Reports/BPKB';
+import Biodata from './Reports/Biodata';
+import Shm from './Reports/SHM';
 
 export {
+  Bpkb,
+  Biodata,
+  Shm,
   PictureAgunan,
   PictureRumah,
   PictureUsaha,

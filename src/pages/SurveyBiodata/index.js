@@ -36,7 +36,7 @@ const SurveyBiodata = ({navigation}) => {
 
           <Button
             title="Submit"
-            onPress={() => navigation.navigate('Survey')}
+            onPress={() => navigation.navigate('ReportBiodata')}
           />
         </View>
       </ScrollView>
