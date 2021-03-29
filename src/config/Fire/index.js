@@ -1,14 +1,13 @@
 import firebase from 'firebase';
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyDxZfRGTuvOoyXBYoLCQPGNf1qfg2losjg',
-  authDomain: 'appsurvey-1e861.firebaseapp.com',
-  databaseURL: 'https://appsurvey-1e861-default-rtdb.firebaseio.com',
-  projectId: 'appsurvey-1e861',
-  storageBucket: 'appsurvey-1e861.appspot.com',
-  messagingSenderId: '530427382112',
-  appId: '1:530427382112:web:ff267f70f9406e79847605',
-  measurementId: 'G-BG4ZPJ08V4',
+  apiKey: 'AIzaSyB_EbyuL8K3kJU8U-uMgw3NOfnaps7rnwM',
+  authDomain: 'appsurvey-c4c81.firebaseapp.com',
+  projectId: 'appsurvey-c4c81',
+  storageBucket: 'appsurvey-c4c81.appspot.com',
+  messagingSenderId: '753533624812',
+  appId: '1:753533624812:web:b3db3de872f78f66e360c9',
+  measurementId: 'G-W0FB68WL2D',
 });
 
 const Fire = firebase;

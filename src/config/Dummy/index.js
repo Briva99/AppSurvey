@@ -1,14 +1,13 @@
 import firebase from 'firebase';
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyAlmzFulYNOPzcrUImBC79Z5P0h2ATYGz8',
-  authDomain: 'percobaankelima-d4f4d.firebaseapp.com',
-  databaseURL: 'https://percobaankelima-d4f4d-default-rtdb.firebaseio.com',
-  projectId: 'percobaankelima-d4f4d',
-  storageBucket: 'percobaankelima-d4f4d.appspot.com',
-  messagingSenderId: '795988188536',
-  appId: '1:795988188536:web:e0f31d6cdbd54329c0fc8d',
-  measurementId: 'G-P4XMJGVB52',
+  apiKey: 'AIzaSyB_EbyuL8K3kJU8U-uMgw3NOfnaps7rnwM',
+  authDomain: 'appsurvey-c4c81.firebaseapp.com',
+  projectId: 'appsurvey-c4c81',
+  storageBucket: 'appsurvey-c4c81.appspot.com',
+  messagingSenderId: '753533624812',
+  appId: '1:753533624812:web:648700fc7414f1ace360c9',
+  measurementId: 'G-FYSWZCE5GP',
 });
 
 const Fire = firebase;
