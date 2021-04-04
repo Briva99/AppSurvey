@@ -33,6 +33,11 @@ allprojects {
 
         google()
         jcenter()
-        maven { url 'https://www.jitpack.io' }
+
+
+// opsi pilihan dibawah bagi error react-native-pdf(ask :app:checkDebugAarMetadata FAILED) pake  yg ke dua.
+        // maven { url 'https://www.jitpack.io' }
+        maven { url 'https://jitpack.io' }
+
     }
 }

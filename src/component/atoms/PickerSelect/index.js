@@ -22,6 +22,8 @@ const PickerSelect = ({
         <Text style={styles.label}>{label}</Text>
         <View style={styles.picker}>
           <Picker
+            selectedValue={selectedValue}
+            onValueChange={onValueChange}
             selectedValue={selectedLanguage}
             onValueChange={(itemValue, itemIndex) =>
               setSelectedLanguage(itemValue)

@@ -3,7 +3,14 @@ import {StyleSheet, Text, TextInput, View} from 'react-native';
 import {colors, fonts} from '../../../utility';
 
 // dibuat props label, yang menerima inputan dari gaji
-const Input = ({label, keyboardType, secureTextEntry, isTextArea}) => {
+const Input = ({
+  label,
+  keyboardType,
+  secureTextEntry,
+  isTextArea,
+  onChangeText,
+  value,
+}) => {
   if (isTextArea) {
     return (
       <View>
@@ -14,8 +21,9 @@ const Input = ({label, keyboardType, secureTextEntry, isTextArea}) => {
           style={styles.input}
           keyboardType={keyboardType}
           secureTextEntry={secureTextEntry}
-          // eslint-disable-next-line react/jsx-no-duplicate-props
           style={styles.txtInputArea}
+          value={value}
+          onChangeText={onChangeText}
         />
       </View>
     );
@@ -28,6 +36,8 @@ const Input = ({label, keyboardType, secureTextEntry, isTextArea}) => {
         style={styles.input}
         keyboardType={keyboardType}
         secureTextEntry={secureTextEntry}
+        value={value}
+        onChangeText={onChangeText}
       />
     </View>
   );
