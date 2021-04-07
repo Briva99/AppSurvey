@@ -9,8 +9,11 @@ const SurveyBiodata = ({navigation}) => {
   const [alamat, setAlamat] = useState("");
   const [no_ktp, setKtp] = useState("");
   const [ttl, setTtl] = useState("");
+  const [jenisKelamin, setJenisKelamin] = useState("")
   const [profesi, setProfesi] = useState("");
   const [namaIbu, setIbu] = useState("");
+  const [status, setStatus]= useState("")
+  const [lokasi, setLokasi]= useState("")
   
 
   // const addData = ()=>{
@@ -34,8 +37,12 @@ const SurveyBiodata = ({navigation}) => {
     alamat: alamat,
     no_ktp: no_ktp,
     tempat_tanggal_lahir: ttl,
+    jenisKelamin: jenisKelamin,
     profesi: profesi,
-    nama_ibu: namaIbu
+    nama_ibu: namaIbu,
+    status: status,
+    lokasi: lokasi
+    
   })
   .then(() => {
     console.log('User added!');
@@ -63,15 +70,15 @@ const SurveyBiodata = ({navigation}) => {
           <Gap height={24} />
           <Input label="Tempat, Tgl Lahir" value={ttl} onChangeText={txtTtl =>setTtl(txtTtl)} />
           <Gap height={20} />
-          <PickerSelect label="Jenis Kelamin" isJenisKelamin={true} />
+          <PickerSelect label="Jenis Kelamin" isJenisKelamin={true} value={jenisKelamin} onValueChange={(value)=>setJenisKelamin(value)} />
           <Gap height={24} />
           <Input label="Profesi" value={profesi} onChangeText={txtProfesi => setProfesi(txtProfesi)} />
           <Gap height={24} />
           <Input label="Nama Ibu Kandung" value={namaIbu} onChangeText={txtIbu => setIbu(txtIbu)} />
           <Gap height={24} />
-          <PickerSelect label="Status" isStatus={true} />
+          <PickerSelect label="Status" isStatus={true} value={status} onValueChange={(value)=>setStatus(value)} />
           <Gap height={24} />
-          <Input label="GPS" />
+          <Input label="GPS" value={lokasi} onChangeText={txtLokasi => setLokasi(txtLokasi)} />
           <Gap height={40} />
 
           <Button

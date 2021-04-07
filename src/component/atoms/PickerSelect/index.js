@@ -12,6 +12,8 @@ const PickerSelect = ({
   isPeruntukanTanah,
   isKependudukan,
   isJenisBangunan,
+  value,
+  onValueChange,
   isKontruksiBangunan,
 }) => {
   const [selectedLanguage, setSelectedLanguage] = useState();
@@ -23,9 +25,12 @@ const PickerSelect = ({
         <View style={styles.picker}>
           <Picker
             selectedValue={selectedLanguage}
-            onValueChange={(itemValue, itemIndex) =>
-              setSelectedLanguage(itemValue)
-            }>
+            value={value}
+            onValueChange={onValueChange}
+            // onValueChange={(itemValue, itemIndex) =>
+            //   setSelectedLanguage(itemValue)
+            // }
+            >
             <Picker.Item label="Pilih Jenis Kelamin" />
             <Picker.Item label="Laki-laki" value="Laki-laki" />
             <Picker.Item label="Perempuan" value="Perempuan" />
@@ -42,9 +47,12 @@ const PickerSelect = ({
         <View style={styles.picker}>
           <Picker
             selectedValue={selectedLanguage}
-            onValueChange={(itemValue, itemIndex) =>
-              setSelectedLanguage(itemValue)
-            }>
+            value={value}
+            onValueChange={onValueChange}
+            // onValueChange={(itemValue, itemIndex) =>
+            //   setSelectedLanguage(itemValue)
+            // }
+            >
             <Picker.Item label="Status" />
             <Picker.Item label="Lajang" value="Lajang" />
             <Picker.Item label="Menikah" value="Menikah" />
