@@ -3,6 +3,7 @@ import {ScrollView, StyleSheet, View} from 'react-native';
 import {Button, Gap, Header, Input, PickerSelect} from '../../component';
 import {colors} from '../../utility';
 import firestore from '@react-native-firebase/firestore';
+import Geolocation from '@react-native-community/geolocation';
 
 const SurveyBiodata = ({navigation}) => {
   const [nama, setNama] = useState("");
@@ -13,7 +14,7 @@ const SurveyBiodata = ({navigation}) => {
   const [profesi, setProfesi] = useState("");
   const [namaIbu, setIbu] = useState("");
   const [status, setStatus]= useState("")
-  const [lokasi, setLokasi]= useState("")
+  const [gps, setGps]= useState("")
   
 
   // const addData = ()=>{
@@ -41,13 +42,21 @@ const SurveyBiodata = ({navigation}) => {
     profesi: profesi,
     nama_ibu: namaIbu,
     status: status,
-    lokasi: lokasi
+    gps: gps
     
   })
   .then(() => {
     console.log('User added!');
   });
   }
+
+  useEffect(()=>{
+
+    Geolocation.getCurrentPosition(info => {
+      setGps(info.coords.longitude +" ; "+ info.coords.latitude)
+  });
+
+  }, [])
 
 
 
@@ -78,7 +87,7 @@ const SurveyBiodata = ({navigation}) => {
           <Gap height={24} />
           <PickerSelect label="Status" isStatus={true} value={status} onValueChange={(value)=>setStatus(value)} />
           <Gap height={24} />
-          <Input label="GPS" value={lokasi} onChangeText={txtLokasi => setLokasi(txtLokasi)} />
+          <Input label="GPS" value={gps} onChangeText={location => setGps(location)} />
           <Gap height={40} />
 
           <Button
