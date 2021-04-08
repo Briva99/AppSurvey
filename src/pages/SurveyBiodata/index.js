@@ -16,6 +16,7 @@ const SurveyBiodata = ({navigation}) => {
   const [status, setStatus]= useState("")
   const [gps, setGps]= useState("")
   
+  
 
   // const addData = ()=>{
   //   const data ={
@@ -30,6 +31,7 @@ const SurveyBiodata = ({navigation}) => {
   // };
   
 
+  // write data ke firestore
    const addData = ()=>{
     firestore()
   .collection('biodata')
@@ -47,14 +49,47 @@ const SurveyBiodata = ({navigation}) => {
   })
   .then(() => {
     console.log('User added!');
+    navigation.navigate('ReportBiodata')
   });
   }
+
+  // read data document dari firestore
+  /*
+  const getDataDoc = async ()=>{
+    const user = await firestore()
+    .collection('biodata')
+    .doc('IyXdVcB2poBMxE72VIMp')
+    .get();
+
+    console.log(user.data())
+
+  }
+  */
+
+  // read data collection dari firestore
+  /*
+  getDataCollection = async ()=>{
+    const user = await firestore()
+    .collection('biodata')
+    .get();
+
+    const allData = user.docs.map((doc)=> doc.data())
+
+    console.log(allData)
+  }
+  */
 
   useEffect(()=>{
 
     Geolocation.getCurrentPosition(info => {
       setGps(info.coords.longitude +" ; "+ info.coords.latitude)
+      
   });
+
+  // getDataDoc()
+  // getDataCollection()
+
+  
 
   }, [])
 
@@ -92,7 +127,7 @@ const SurveyBiodata = ({navigation}) => {
 
           <Button
             title="Submit"
-            onPress={()=>{addData()}}
+            onPress={()=>{addData()} }
           />
         </View>
       </ScrollView>
