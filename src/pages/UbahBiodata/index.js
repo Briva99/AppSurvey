@@ -1,41 +1,28 @@
 import React, {useEffect, useState} from 'react';
-import {Alert, ScrollView, StyleSheet, View} from 'react-native';
+import {Alert, ScrollView, StyleSheet, View, Text} from 'react-native';
 import {Button, Gap, Header, Input, PickerSelect} from '../../component';
 import {colors} from '../../utility';
 import firestore from '@react-native-firebase/firestore';
 import Geolocation from '@react-native-community/geolocation';
 
-const SurveyBiodata = ({navigation}) => {
-  const [nama, setNama] = useState("");
-  const [alamat, setAlamat] = useState("");
-  const [no_ktp, setKtp] = useState("");
-  const [ttl, setTtl] = useState("");
-  const [jenisKelamin, setJenisKelamin] = useState("")
-  const [profesi, setProfesi] = useState("");
-  const [namaIbu, setIbu] = useState("");
-  const [status, setStatus]= useState("")
-  const [gps, setGps]= useState("")
-  
-  
-
-  // const addData = ()=>{
-  //   const data ={
-  //     nama,
-  //     alamat,
-  //     no_ktp,
-  //     ttl,
-  //     profesi,
-  //     namaIbu,
-  //   }
-  //   console.log('Masukkan submit', data)
-  // };
-  
+const UbahBiodata = ({navigation}) => {
+    const [data, setData] = useState([])
+    const [nama, setNama] = useState("");
+    const [alamat, setAlamat] = useState("");
+    const [no_ktp, setKtp] = useState("");
+    const [ttl, setTtl] = useState("");
+    const [jenisKelamin, setJenisKelamin] = useState("")
+    const [profesi, setProfesi] = useState("");
+    const [namaIbu, setIbu] = useState("");
+    const [status, setStatus]= useState("")
+    const [gps, setGps]= useState("")
 
   // write data ke firestore
-   const addData = ()=>{
+   const updateData = async (id)=>{
     firestore()
     .collection('biodata')
-    .add({
+    .doc(id)
+    .update({
       nama: nama,
       alamat: alamat,
       no_ktp: no_ktp,
@@ -48,7 +35,7 @@ const SurveyBiodata = ({navigation}) => {
       
     })
     .then(() => {
-      Alert.alert('Info','Sukses Tambah Data')
+      Alert.alert('Info','Sukses Ubah Data')
       navigation.navigate('ReportBiodata')
     });
   }
@@ -68,7 +55,7 @@ const SurveyBiodata = ({navigation}) => {
 
   // read data collection dari firestore
   /*
-  getDataCollection = async ()=>{
+  const getDataCollection = async ()=>{
     const user = await firestore()
     .collection('biodata')
     .get();
@@ -79,6 +66,21 @@ const SurveyBiodata = ({navigation}) => {
   }
   */
 
+  const getDataCollection = async ()=>{
+    const user = await firestore()
+    .collection('biodata')
+    // .doc(id
+    .get();
+
+    // mengambil key dan field pada database
+    const allData = user.docs.map((doc)=> Object.assign({id: doc.id}, doc.data()))
+    console.log(allData)
+    
+    setData(allData)
+
+    
+  }
+
   useEffect(()=>{
 
     Geolocation.getCurrentPosition(info => {
@@ -86,8 +88,9 @@ const SurveyBiodata = ({navigation}) => {
       
   });
 
-  // getDataDoc()
-  // getDataCollection()
+  getDataCollection()
+
+console.log(getDataCollection())
 
   
 
@@ -98,12 +101,13 @@ const SurveyBiodata = ({navigation}) => {
   return (
     <View style={styles.pages}>
       <Header
-        type="icon-profile"
-        title="Biodata"
+        // type="icon-profile"
+        title="Ubah Biodata"
         onPress={() => navigation.goBack()}
       />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
+          {/* <Text>id ={user.data.id}</Text> */}
           {/* Input di ambil dari folder component/atom/input */}
           <Gap height={20} />
           <Input label="Full Name" value={nama} onChangeText={txtNama => setNama(txtNama)}  />
@@ -127,7 +131,7 @@ const SurveyBiodata = ({navigation}) => {
 
           <Button
             title="Submit"
-            onPress={()=>{addData()} }
+            onPress={()=>{updateData(data.id)} }
           />
         </View>
       </ScrollView>
@@ -137,7 +141,7 @@ const SurveyBiodata = ({navigation}) => {
 
 //() => navigation.navigate('ReportBiodata')
 
-export default SurveyBiodata;
+export default UbahBiodata;
 
 const styles = StyleSheet.create({
   content: {
