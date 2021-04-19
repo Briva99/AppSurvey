@@ -29,6 +29,7 @@ import {BottomNavigator} from '../component';
 import ReportBpkb from '../pages/Reports/BPKB';
 import ReportBiodata from '../pages/Reports/Biodata';
 import ReportShm from '../pages/Reports/SHM';
+import UbahBiodata from '../pages/UbahBiodata';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -88,6 +89,11 @@ const Router = () => {
       <Stack.Screen
         name="SurveyBiodata"
         component={SurveyBiodata}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="UbahBiodata"
+        component={UbahBiodata}
         options={{headerShown: false}}
       />
       <Stack.Screen
