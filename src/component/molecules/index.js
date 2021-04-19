@@ -7,9 +7,11 @@ import List from './List';
 import ProfilItem from './ProfilItem';
 import ProfileNasabah from './ProfileNasabah';
 import FolderFoto from './FolderFoto';
+import Loading from './Loading';
 
 export {
   FolderFoto,
+  Loading,
   Header,
   BottomNavigator,
   ListSurvey,
