@@ -3,6 +3,9 @@ import {StyleSheet, Text, TextInput, View} from 'react-native';
 import {colors, fonts} from '../../../utility';
 
 // dibuat props label, yang menerima inputan dari gaji
+
+
+
 const Input = ({
   label,
   keyboardType,
@@ -11,6 +14,7 @@ const Input = ({
   onChangeText,
   value,
 }) => {
+
   if (isTextArea) {
     return (
       <View>
