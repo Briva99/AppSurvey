@@ -6,4 +6,12 @@ import DummyShirohige from './Shirohige.png';
 import DummyProfile from './mrh.jpg';
 import DummyImage from './Image.jpeg';
 
-export {DummyRuffi, DummyIce, DummyGoldDRoger, DummyShank, DummyShirohige, DummyProfile, DummyImage};
+export {
+  DummyRuffi,
+  DummyIce,
+  DummyGoldDRoger,
+  DummyShank,
+  DummyShirohige,
+  DummyProfile,
+  DummyImage,
+};
