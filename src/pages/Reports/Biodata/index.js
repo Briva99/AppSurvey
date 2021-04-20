@@ -123,7 +123,7 @@ const ReportBiodata = ({navigation}) => {
                     />
 
                 </View>
-
+                </View>
             </TouchableOpacity>
 
           })}
