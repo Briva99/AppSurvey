@@ -21,6 +21,7 @@ import {
   Splash,
   Survey,
   SurveyBiodata,
+  UploadPhoto,
   Usaha,
   UserProfile,
 } from '../pages';
@@ -81,21 +82,21 @@ const Router = () => {
         component={Gaji}
         options={{headerShown: false}}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="Report"
         component={Report}
         options={{headerShown: false}}
-      />
+      /> */}
       <Stack.Screen
         name="SurveyBiodata"
         component={SurveyBiodata}
         options={{headerShown: false}}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="UbahBiodata"
         component={UbahBiodata}
         options={{headerShown: false}}
-      />
+      /> */}
       <Stack.Screen
         name="Usaha"
         component={Usaha}
@@ -176,9 +177,14 @@ const Router = () => {
         component={ReportShm}
         options={{headerShown: false}}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="ReportBiodata"
         component={ReportBiodata}
+        options={{headerShown: false}}
+      /> */}
+      <Stack.Screen
+        name="UploadPhoto"
+        component={UploadPhoto}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

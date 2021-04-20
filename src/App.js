@@ -1,7 +1,5 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import ReportBiodata from './pages/Reports/Biodata';
-import UbahBiodata from './pages/UbahBiodata';
 import Router from './router/index';
 import {LogBox} from 'react-native';
 import FlashMessage from 'react-native-flash-message';

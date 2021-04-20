@@ -7,10 +7,10 @@ const UserProfile = ({navigation}) => {
     <View style={styles.page}>
       <Header title="Profile" onPress={() => navigation.goBack()} />
       <Gap height={10} />
-      <Profile name="Mongky D Ruffi" job="Surveyor" />
+      <Profile name="Briva" job="Surveyor" />
       <Gap height={14} />
       <ProfilItem label="ID Pegawai" value="01SRVYR260321" />
-      <ProfilItem label="alumnus" value="Universitas Merdeka Raya, 2020" />
+      <ProfilItem label="alumnus" value="Universitas ..., 2020" />
     </View>
   );
 };

@@ -10,6 +10,7 @@ const ListSurvey = ({name, address, pic, pengajuan, onPress}) => {
         <Text style={styles.title}>{name}</Text>
         <Text style={styles.address}>{address}</Text>
         <Text style={styles.pengajuan}>{pengajuan}</Text>
+        {/* <Text style={styles.status}>Selesai</Text> */}
       </View>
       {/* <View>
         <Text syle={styles.status}>Status</Text>
@@ -43,7 +44,13 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primary[600],
     marginTop: 5,
   },
-  // status:{
-  //   marginRight: 20,
-  // }
+  status:{
+    marginRight: 120,
+    marginLeft: 12,
+    backgroundColor:'#00FF00',
+    borderRadius: 10,
+   
+    justifyContent: 'center'
+
+  }
 });

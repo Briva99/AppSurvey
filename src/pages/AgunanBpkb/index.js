@@ -21,9 +21,9 @@ const AgunanBpkb = ({navigation}) => {
   const [noBpkb, setNoBpkb] = useState('');
   const [namaBpkb, setNamaBpkb] = useState('');
   const [alamat, setAlamat] = useState('');
-  const [gps, setGps] = useState('');
+  const [gps, setGps] = useState('-6.3894945, 106.9068255');
 
-  onSubmit = () => {
+  const onSubmit = () => {
     const data = {
       jenisAgunan,
       nopol,

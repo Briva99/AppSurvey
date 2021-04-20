@@ -1,13 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
-import {
-  Button,
-  Gap,
-  Header,
-  Input,
-  PickerSelect,
-  PickerMultiSelect,
-} from '../../component';
+import {Button, Gap, Header, Input, PickerSelect} from '../../component';
 import {colors} from '../../utility';
 
 const AgunanSHM = ({navigation}) => {

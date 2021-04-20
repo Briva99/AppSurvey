@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {Button, Gap, Header, Input, Loading} from '../../component';
-import {Fire} from '../../config';
+import Fire from '../../config/Fire';
+// import {Fire} from '../../config';
 import {
   colors,
   showError,
@@ -18,11 +19,9 @@ const Register = ({navigation}) => {
     password: '',
   });
   const [profession] = useState([
-    {id: 1, label: 'Swasta', value: 'swasta'},
-    {id: 2, label: 'Wirausaha', value: 'wirausaha'},
-    {id: 3, label: 'PNS', value: 'PNS'},
-    {id: 4, label: 'TNI/Polri', value: 'TNI/Polri'},
-    {id: 5, label: 'Lain-lain', value: 'Lain-lain'},
+    {id: 1, label: 'Surveyor', value: 'Surveyor'},
+    {id: 2, label: 'SPV Marketing', value: 'SPV Marketing'},
+    {id: 3, label: 'Credit Analis', value: 'Credit Analis'},
   ]);
   const [loading, setLoading] = useState(false);
   const onContinue = () => {
@@ -34,16 +33,16 @@ const Register = ({navigation}) => {
         showSuccess('Registrasi Berhasil');
         setForm('reset');
         const data = {
-          userName: form.userName,
+          userSurveyor: form.userSurveyor,
           email: form.email,
           profession: form.profession,
           uid: success.user.uid,
         };
         Fire.database()
-          .ref('users/' + success.user.uid + '/')
+          .ref('userSurveyor/' + success.user.uid + '/')
           .set(data);
 
-        storeData('user', data);
+        storeData('userSurveyor', data);
         navigation.navigate('UploadPhoto', data);
         console.log('register sukses :', success);
       })

@@ -23,10 +23,12 @@ import PictureUsaha from './PictureUsaha';
 import Bpkb from './Reports/BPKB';
 import Biodata from './Reports/Biodata';
 import Shm from './Reports/SHM';
+import UploadPhoto from './UploadPhoto';
 
 export {
   Bpkb,
   Biodata,
+  UploadPhoto,
   Shm,
   PictureAgunan,
   PictureRumah,

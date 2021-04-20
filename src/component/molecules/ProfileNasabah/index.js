@@ -1,13 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
-import {DummyIce} from '../../../assets';
+import {DummyIce, DummyImage, DummyProfile} from '../../../assets';
 import {colors, fonts} from '../../../utility';
 
 const ProfileNasabah = ({name, address}) => {
   return (
     <View style={styles.container}>
       <View style={styles.borderProfile}>
-        <Image source={DummyIce} style={styles.avatar} />
+        <Image source={DummyImage} style={styles.avatar} />
       </View>
       {name && (
         <View>

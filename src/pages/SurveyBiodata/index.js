@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {Alert, ScrollView, StyleSheet, View} from 'react-native';
 import {Button, Gap, Header, Input, PickerSelect} from '../../component';
 import {colors} from '../../utility';
-import firestore from '@react-native-firebase/firestore';
-import Geolocation from '@react-native-community/geolocation';
+// import firestore from '@react-native-firebase/firestore';
+// import Geolocation from '@react-native-community/geolocation';
 
 const SurveyBiodata = ({navigation}) => {
   const [nama, setNama] = useState('');
@@ -14,7 +14,7 @@ const SurveyBiodata = ({navigation}) => {
   const [profesi, setProfesi] = useState('');
   const [namaIbu, setIbu] = useState('');
   const [status, setStatus] = useState('');
-  const [gps, setGps] = useState('');
+  const [gps, setGps] = useState('-6.3894945, 106.9068255');
 
   // const addData = ()=>{
   //   const data ={
@@ -29,25 +29,25 @@ const SurveyBiodata = ({navigation}) => {
   // };
 
   // write data ke firestore
-  const addData = () => {
-    firestore()
-      .collection('biodata')
-      .add({
-        nama: nama,
-        alamat: alamat,
-        no_ktp: no_ktp,
-        tempat_tanggal_lahir: ttl,
-        jenisKelamin: jenisKelamin,
-        profesi: profesi,
-        nama_ibu: namaIbu,
-        status: status,
-        gps: gps,
-      })
-      .then(() => {
-        Alert.alert('Info', 'Sukses Tambah Data');
-        navigation.navigate('ReportBiodata');
-      });
-  };
+  //   const addData = () => {
+  //     firestore()
+  //       .collection('biodata')
+  //       .add({
+  //         nama: nama,
+  //         alamat: alamat,
+  //         no_ktp: no_ktp,
+  //         tempat_tanggal_lahir: ttl,
+  //         jenisKelamin: jenisKelamin,
+  //         profesi: profesi,
+  //         nama_ibu: namaIbu,
+  //         status: status,
+  //         gps: gps,
+  //       })
+  //       .then(() => {
+  //         Alert.alert('Info', 'Sukses Tambah Data');
+  //         navigation.navigate('ReportBiodata');
+  //       });
+  //   };
 
   // read data document dari firestore
   /*
@@ -75,14 +75,14 @@ const SurveyBiodata = ({navigation}) => {
   }
   */
 
-  useEffect(() => {
-    Geolocation.getCurrentPosition(info => {
-      setGps(info.coords.longitude + ' ; ' + info.coords.latitude);
-    });
+  //   useEffect(() => {
+  //     Geolocation.getCurrentPosition(info => {
+  //       setGps(info.coords.longitude + ' ; ' + info.coords.latitude);
+  //     });
 
-    // getDataDoc()
-    // getDataCollection()
-  }, []);
+  //     // getDataDoc()
+  //     // getDataCollection()
+  //   }, []);
 
   return (
     <View style={styles.pages}>
@@ -156,9 +156,7 @@ const SurveyBiodata = ({navigation}) => {
 
           <Button
             title="Submit"
-            onPress={() => {
-              addData();
-            }}
+            onPress={() => navigation.navigate('Survey')}
           />
         </View>
       </ScrollView>

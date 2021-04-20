@@ -1,15 +1,30 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {DummyRuffi} from '../../../assets';
-import {colors, fonts} from '../../../utility';
+import {ILNullPhoto} from '../../../assets';
+import {colors, fonts, getData} from '../../../utility';
 
 const HomeProfile = ({onPress}) => {
+  const [profile, setProfile] = useState({
+    photo: ILNullPhoto,
+    userName: '',
+    profession: '',
+  });
+
+  useEffect(() => {
+    getData('userSurveyor').then(res => {
+      console.log('data user: ', res);
+      const data = res;
+      data.photo = {uri: res.photo};
+      setProfile(res);
+    });
+  }, []);
+
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Image source={DummyRuffi} style={styles.avatar} />
+      <Image source={profile.photo} style={styles.avatar} />
       <View>
-        <Text style={styles.name}>Mongky D Ruffi</Text>
-        <Text style={styles.profesi}>Surveyor</Text>
+        <Text style={styles.name}>{profile.userSurveyor}</Text>
+        <Text style={styles.profesi}>{profile.profession}</Text>
       </View>
     </TouchableOpacity>
   );

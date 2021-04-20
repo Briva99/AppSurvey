@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import {colors, fonts} from '../../../utility';
-import {Picker} from '@react-native-community/picker';
+// import {Picker} from '@react-native-community/picker';
+import {Picker} from '@react-native-picker/picker';
 
 const Input = ({
   label,
